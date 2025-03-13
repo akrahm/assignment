@@ -1,55 +1,60 @@
-# React + TypeScript + Vite
+Project Setup
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React application bootstrapped with Vite, using Redux Toolkit for state management and TypeScript for type safety.
 
-Currently, two official plugins are available:
+Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ensure you have Node.js (>=16.0.0) installed. You can check by running:
 
-## Expanding the ESLint configuration
+node -v
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Installation
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Clone the repository:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+git clone <repository_url>
+cd <project_directory>
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Install dependencies:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-"# assignment" 
+npm install
+
+Running the Project
+
+To start the development server:
+
+npm run dev
+
+Building for Production
+
+To generate a production-ready build:
+
+npm run build
+
+Running Tests
+
+This project uses React Testing Library and Jest for testing. Run tests with:
+
+npm run test
+
+Key Dependencies
+
+React 19 - UI Library
+
+Redux Toolkit - State Management
+
+React Router - Client-side Routing
+
+Styled Components - CSS-in-JS Styling
+
+Vite - Fast Build Tool
+
+TypeScript - Static Typing
+
+Dev Dependencies
+
+ESLint - Code Linting
+
+Jest & React Testing Library - Testing Framework
+
+TypeScript Type Definitions - Ensures type safety in development
